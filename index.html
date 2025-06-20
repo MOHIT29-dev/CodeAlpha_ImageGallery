@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Advanced Image Gallery</h1>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div class="filters">
+    <button class="magnet" onclick="filterImages('all')">All</button>
+    <button class="magnet" onclick="filterImages('nature')">Nature</button>
+    <button class="magnet" onclick="filterImages('city')">City</button>
+    <button class="magnet" onclick="filterImages('animals')">Animals</button>
+    <button class="magnet" onclick="filterImages('people')">People</button>
+  </div>
+  <div class="gallery"></div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="">
+    <p id="lightbox-caption"></p>
+    <div class="nav-buttons">
+      <button class="magnet" onclick="navigate(-1)">⟵</button>
+      <button class="magnet" onclick="navigate(1)">⟶</button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/sheryjs/dist/Shery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
